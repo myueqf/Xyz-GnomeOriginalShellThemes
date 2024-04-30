@@ -1,0 +1,336 @@
+/*
+自用的一个gnome香草风格主题
+大部分代码都是抄的啦～
+大部分内容都有注释，有什么想改的改起来也非常方便
+至于为什么名称叫"xyz"呢？因为随便取的啦～
+喵呜～今天又是想摸鱼的一天呢～
+2024-4-29
+*/
+@import url("/usr/share/gnome-shell/theme/gnome-shell.css");
+/*顶栏颜色与透明度*/
+#panel { background-color: rgba(6.7,6.7,10.4,0.99); }
+#panel .panel-corner { -panel-corner-background-color: rgba(6.7,6.7,10.4); }
+#panel:overview { background-color: transparent; }
+/*背景色*/
+#overviewGroup {
+  background-color: #11111b;
+}
+/*选中的选项颜色*/
+.quick-toggle:checked {
+  background-color: #83b0d3 !important;
+  color: rgba(0, 0, 0, 0.87);
+}
+/*选中后鼠标悬停的颜色*/
+.quick-toggle:checked:hover {
+  background-color: #83b9b8 !important;
+  color: rgba(0, 0, 0, 0.87);
+}
+/*app文件夹对话框的文字的颜色*/
+.app-folder-dialog .folder-name-container .folder-name-label {
+  padding: 9px 8px;
+  color: #fab387;
+}
+/*日历当日的颜色*/
+.calendar .calendar-today:selected {
+  background-color: #fab387;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+/*日历当日悬停的颜色*/
+.calendar .calendar-today:selected:hover,
+.calendar .calendar-today:selected:focus {
+  background-color: #ca9ee6;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+/*也是关于日历的，作用未知，一起抄了。*/
+.calendar .calendar-day-base:active,
+.calendar .calendar-day-base:selected {
+  color: #f2d5cf;
+  background-color: rgba(242, 213, 207, 0.3);
+  border-color: transparent;
+}
+.calendar .pager-button {
+  width: 32px !important;
+  height: 32px !important;
+  margin: 2px !important;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: #f2d5cf;
+}
+
+/*标签，鼠标悬停在dock上的标签*/
+.dash-label {
+background-color: rgba(41, 44, 60, 0.95);
+color: #fab387;
+padding: 6px 12px;
+text-align: center;
+border-radius: 12px;
+border: 1px solid rgba(65, 72, 104, 0.55);
+box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+-y-offset: 12px;
+-x-offset: 8px;
+}
+/*鼠标悬停在顶栏菜单的颜色*/
+#panel .panel-button:hover {
+  color: #fab387;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1000px #414559;
+}
+/*也是鼠标悬停在顶栏菜单的颜色*/
+#panel .panel-button:active,
+#panel .panel-button:active:hover,
+#panel .panel-button:overview,
+#panel .panel-button:overview:hover,
+#panel .panel-button:focus,
+#panel .panel-button:focus:hover,
+#panel .panel-button:checked,
+#panel .panel-button:checked:hover {
+  background-color: transparent;
+  color: #fab387;
+  box-shadow: inset 0 0 0 1000px #51576d;
+}
+/*阿吧阿吧，一堆按钮的颜色设定*/
+.screenshot-ui-show-pointer-button,
+.screenshot-ui-type-button,
+.login-dialog .cancel-button,
+.login-dialog .switch-user-button,
+.login-dialog .login-dialog-session-list-button,
+.unlock-dialog .cancel-button,
+.unlock-dialog .switch-user-button,
+.unlock-dialog .login-dialog-session-list-button,
+.login-dialog .modal-dialog-button,
+.login-dialog .modal-dialog-button:default,
+.unlock-dialog .modal-dialog-button,
+.unlock-dialog .modal-dialog-button:default {
+  color: #f2d5cf;
+  background-color: transparent;
+  box-shadow: none !important;
+}
+.screenshot-ui-show-pointer-button:focus,
+.screenshot-ui-type-button:focus,
+.login-dialog .cancel-button:focus,
+.login-dialog .switch-user-button:focus,
+.login-dialog .login-dialog-session-list-button:focus,
+.unlock-dialog .cancel-button:focus,
+.unlock-dialog .switch-user-button:focus,
+.unlock-dialog .login-dialog-session-list-button:focus,
+.login-dialog .modal-dialog-button:focus,
+.unlock-dialog .modal-dialog-button:focus {
+  color: #f2d5cf;
+  background-color: rgba(242, 213, 207, 0.08);
+  box-shadow: none !important;
+}
+.screenshot-ui-show-pointer-button:hover,
+.screenshot-ui-type-button:hover,
+.login-dialog .cancel-button:hover,
+.login-dialog .switch-user-button:hover,
+.login-dialog .login-dialog-session-list-button:hover,
+.unlock-dialog .cancel-button:hover,
+.unlock-dialog .switch-user-button:hover,
+.unlock-dialog .login-dialog-session-list-button:hover,
+.login-dialog .modal-dialog-button:hover,
+.unlock-dialog .modal-dialog-button:hover {
+  color: #f2d5cf;
+  background-color: rgba(242, 213, 207, 0.12);
+  box-shadow: none !important;
+}
+.screenshot-ui-show-pointer-button:active,
+.screenshot-ui-type-button:active,
+.login-dialog .cancel-button:active,
+.login-dialog .switch-user-button:active,
+.login-dialog .login-dialog-session-list-button:active,
+.unlock-dialog .cancel-button:active,
+.unlock-dialog .switch-user-button:active,
+.unlock-dialog .login-dialog-session-list-button:active,
+.login-dialog .modal-dialog-button:active,
+.unlock-dialog .modal-dialog-button:active {
+  color: #f2d5cf;
+  background-color: rgba(242, 213, 207, 0.2);
+  box-shadow: none !important;
+}
+/*到此全是，我也不到干什么的。。。*/
+
+/*消息菜单的鼠标悬停着色*/
+.popup-menu .message:hover,
+.world-clocks-button:hover,
+.weather-button:hover,
+.events-button:hover,
+.popup-menu .message:focus,
+.world-clocks-button:focus,
+.weather-button:focus,
+.events-button:focus {
+  color: #f2d5cf;
+  background-color: rgba(242, 213, 207, 0.12);
+  box-shadow: none;
+}
+.popup-menu .message:active,
+.world-clocks-button:active,
+.weather-button:active,
+.events-button:active {
+  color: #f2d5cf;
+  background-color: rgba(242, 213, 207, 0.2);
+  box-shadow: none;
+}
+/*似乎是关于日历的？算了一起抄了。*/
+.calendar .pager-button {
+  width: 32px !important;
+  height: 32px !important;
+  margin: 2px !important;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: #f2d5cf;
+}
+/*搜索框*/
+StEntry,
+.search-entry {
+  min-height: 20px;
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 12px;
+  color: #f2d5cf;
+  background-color: rgba(242, 213, 207, 0.04);
+  border: 2px solid transparent;
+  box-shadow: none;
+  caret-color: #f2d5cf;
+  selection-background-color: rgba(242, 213, 207, 0.25);
+  selected-color: #f2d5cf;
+}
+StEntry:hover,
+.search-entry:hover {
+  color: #f2d5cf;
+  border-color: rgba(238, 190, 190, 0.35);
+  background-color: rgba(242, 213, 207, 0.04);
+}
+StEntry:focus,
+.search-entry:focus {
+  color: #f2d5cf;
+/*  border-color: #eebebe;  效果不太好。。*/
+  background-color: rgba(242, 213, 207, 0.04);
+  box-shadow: none;
+}
+/*顶栏按钮颜色*/
+#panel .panel-button {
+  -natural-hpadding: 12px;
+  -minimum-hpadding: 6px;
+  font-weight: bold;
+  color: #f2d5cf;
+  transition-duration: 150ms;
+  border-radius: 9999px;
+  text-shadow: none;
+  border: 2px solid transparent;
+}
+/*屏幕截图工具ui颜色*/
+.screenshot-ui-area-selector-handle {
+  border-radius: 9999px;
+  background-color: #f2d5cf;
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);
+  width: 24px;
+  height: 24px;
+}
+/*系统设置图标按钮颜色*/
+.quick-settings-system-item .icon-button {
+  background-color: rgba(242, 213, 207, 0.12);
+  color: #fab387;
+  border-radius: 24px;
+  border: 1px solid rgba(242, 213, 207, 0.2);
+}
+/*系统设置图标悬停颜色*/
+.quick-settings-system-item .icon-button:hover {
+  background-color: rgba(234, 232, 255, 0.12);
+  color: #99d1db;
+  border-radius: 24px;
+  border: 1px solid rgba(234, 232, 255, 0.2);
+}
+/*电源图标颜色*/
+.quick-settings-system-item .power-item {
+min-height: 0;
+min-width: 0;
+color: #fab387;
+}
+.quick-settings-system-item .power-item:hover {
+min-height: 0;
+min-width: 0;
+color: #99d1db;
+}
+.quick-settings-system-item .power-item:insensitive {
+color: #fab387;
+background-color: rgba(41, 44, 60, 0.95);
+box-shadow: none !important;
+background-color: transparent;
+}
+/*似乎是什么面板按钮。时钟显示：悬停和面板按钮。时钟显示：悬停。时钟？作用不到。。
+#panel .panel-button.clock-display:hover {
+  box-shadow: none;
+  color: #fab387;
+}
+
+#panel .panel-button.clock-display:hover .clock {
+  color: #fab387;
+  box-shadow: inset 0 0 0 1000px #414559;
+}
+*/
+.quick-menu-toggle .quick-toggle-arrow:checked:active {
+  background-color: #96c4c3 !important;
+  color: rgba(0, 0, 0, 0.87);
+}
+.quick-toggle:checked:active {
+  background-color: #96c4c3 !important;
+  color: rgba(0, 0, 0, 0.87);
+}
+/*关闭的按钮*/
+.quick-toggle {
+  background-color: rgba(131, 185, 184, 0.1) !important;
+  color: #83b9b8;
+}
+/*某些图标的着色*/
+.show-apps:hover .overview-icon,
+.show-apps:focus .overview-icon,
+.show-apps:selected .overview-icon,
+.app-well-app:hover .overview-icon,
+.app-well-app:focus .overview-icon,
+.app-well-app:selected .overview-icon,
+.grid-search-result:hover .overview-icon,
+.grid-search-result:focus .overview-icon,
+.grid-search-result:selected .overview-icon {
+  background-color: rgba(42, 42, 55, 0.65);
+  color: #dca561;
+  border-radius: 24px;
+  border-image: none;
+  background-image: none;
+}
+/*角落波纹颜色*/
+.ripple-box {
+  background-color: rgba(238, 190, 190, 0.35);
+  box-shadow: 0 0 2px 2px #fab387;
+  width: 52px;
+  height: 52px;
+  border-radius: 0 0 52px 0;
+}
+/*应用预览界面的标签*/
+.window-caption {
+  color: #f2d5cf;
+  background-color: rgba(48, 52, 70, 0.95);
+  border-radius: 9999px;
+  padding: 6px 12px;
+}
+/*应用预览界面的窗口关闭按钮*/
+.window-close,
+.screenshot-ui-close-button {
+  background-color: #414559;
+  color: #f2d5cf;
+  border-radius: 21px;
+  padding: 3px;
+  height: 30px;
+  width: 30px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  transition-duration: 200ms;
+}
+/*应用预览界面的窗口关闭按钮鼠标悬停着色*/
+.window-close:hover,
+.screenshot-ui-close-button:hover {
+  color: #f2d5cf;
+  background-color: #bb7a61;
+}
+/*================================测试内容的分割线===================================*/
+
+  
